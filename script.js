@@ -1,19 +1,24 @@
+var num = document.getElementById("num");
 function fizzbuzz(){
-    for (var i = 0; i<=20; i++){
+    var array=[];
+    for (var i = 0; i<=100; i++){
         if (i%15===0){
-            console.log(i+" FizzBuzz!")
+            array.push(i+" FizzBuzz!\n")
         }
 
         else if (i%3===0){
-            console.log(i+" Fizz!")
+            array.push(i+" Fizz!\n")
         }
 
         else if (i%5===0){
-            console.log(i+" Buzz!")
+            array.push(i+" Buzz!\n")
         }
 
         else{
-            console.log(i)
+            array.push(i+"\n")
         }
+    }
+    for (var i = 0; i<array.length; i++){
+        num.innerText += array[i];
     }
 }
